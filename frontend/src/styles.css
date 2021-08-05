@@ -1,0 +1,53 @@
+.App {
+  font-family: Gilroy, Helvetica, Arial, sans-serif !important;
+  text-align: center;
+}
+.project h1 {
+  font-weight: 700;
+}
+#btn1 {
+  padding: 15px 60px;
+  border-radius: 0px;
+}
+#bantxt {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: left;
+}
+.banner {
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
+}
+
+.footer li {
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+}
+.footer li:hover {
+  text-decoration: underline;
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+}
+
+#project-txt {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.products card btn {
+  background-color: red;
+}
+#line1 {
+  display: flex;
+  justify-content: center;
+}
+#line {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #1cc06d;
+}
