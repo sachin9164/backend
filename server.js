@@ -13,12 +13,9 @@ const usersRouter = require('./routes/user');
 app.use('/users', usersRouter);
 
 
-app.get('/',(req,res)=>{
-   res.send("Home Page!")
-    
-})
 
-if ( process.env.NODE_ENV == "production"){
+
+
 
     app.use(express.static("frontend/build"));
 
@@ -31,11 +28,11 @@ if ( process.env.NODE_ENV == "production"){
     })
 
 
-}
+
 
 mongoose.connect(uri,{ useNewUrlParser: true , useUnifiedTopology: true }).then(()=>
 {
-    app.listen( process.env.PORT || 5000,()=>{
+    app.listen( process.env.PORT || 8080,()=>{
         console.log("Porting running in 5000 !")
     });
     console.log("Connected to DB")
