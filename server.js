@@ -2,8 +2,6 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 const cors = require('cors');
-const path = require("path");
-
 
 const uri = 'mongodb+srv://sachin:LL5lrSQfCaOYdGOs@cluster0.6s9rx.mongodb.net/bmi?retryWrites=true&w=majority';
 const app = express();
@@ -30,10 +28,17 @@ app.get('/',(req,res)=>{
 
 if ( process.env.NODE_ENV == "production"){
 
-    app.use(express.static("frontend/build"));
+    app.use(express.static("client/build"));
 
     const path = require("path");
 
-    app.get("/react", (req, res) => {
+    app.get("*", (req, res) => {
 
-        res.sendFile(path.res
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+
+    })
+
+
+}
+
+
