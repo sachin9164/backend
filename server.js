@@ -13,8 +13,12 @@ const usersRouter = require('./routes/user');
 
 app.use('/users', usersRouter);
 
+app.use(express.static("frontend/build"));
+app.get("*", (req, res) => {
 
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 
+})
 
 
 if(process.env.NODE_ENV === "production"){
